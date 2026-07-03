@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %} index page {% endblock %}
+
+{% block content %}
+    <h1>hello world</h1>
+    <!-- this is how you add a foreign values using jinja2 template -->
+    <p>{{ myvalue }}</p> 
+    <p>{{ myresult }}</p>
+    <p>{{ mylist }}</p> <!-- displaying all values from the list -->
+    <br>
+    {% for item in mylist %} <!-- giving a functionality to the website -->
+            {% if item == 30 %}
+                <li style="color: red;">{{ item }}</li>
+            {% else %}
+                <li>{{ item }}</li>
+            {% endif %}
+    {% endfor %}
+    <a href="{{ url_for('other') }}">Other</a> <!-- you only mention the name of the fucntion and all changes happen dynamically-->
+{% endblock %}

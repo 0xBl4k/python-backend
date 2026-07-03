@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %} other {% endblock %}
+
+{% block content %}
+    <p>Filters</p>
+    <p>{{ someText }}</p> <!-- if u wanna add a filter u pass it through a pipe-->
+    <p>{{ someText|title }}</p>
+    <p>{{ someText|upper }}</p>
+    <p>{{ someText|lower }}</p>
+    <p>{{ someText|replace('l', 'L') }}</p>
+    <p>{{ someText|reverse_string }}</p> <!-- my custom filter -->
+{% endblock %}
